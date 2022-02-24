@@ -1,0 +1,51 @@
+package demo;
+
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Insets;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.border.Border;
+
+public class DemoJList_MaVuToTram_67 extends JFrame {
+	private JTextField txtItems;
+	public DemoJList_MaVuToTram_67() {
+		setTitle("Simple JList");
+		setSize(400, 200);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		
+		JPanel pJList = new JPanel();
+		pJList.setBorder(BorderFactory.createTitledBorder("Simple JList"));
+		String[] entries = {"Entry 1","Entry 2","Entry 3","Entry 4","Entry 5","Entry 6"};
+		JList lstEntry;
+		lstEntry = new JList(entries);
+		lstEntry.setVisibleRowCount(4);
+		JScrollPane lstPane = new JScrollPane(lstEntry);
+		pJList.add(lstEntry);
+		add(pJList,BorderLayout.CENTER);
+		
+		Box b = Box.createVerticalBox();
+		b.setBorder(BorderFactory.createTitledBorder("List Selection"));
+		Box b1 = Box.createHorizontalBox();
+		b1.add(new JLabel("Last Selection: "));
+		b1.add(txtItems = new JTextField(20));
+		b.add(Box.createRigidArea(new Dimension(10,10)));
+		b.add(b1);
+		b.add(Box.createRigidArea(new Dimension(10,10)));
+		add(b,BorderLayout.SOUTH);
+	}
+	public static void main(String[] args) {
+		new DemoJList_MaVuToTram_67().setVisible(true);
+	}
+}

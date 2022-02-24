@@ -1,0 +1,16 @@
+package lab1;
+
+import javax.swing.JFrame;
+
+public class GiaiPhuongTrinh extends JFrame {
+	public GiaiPhuongTrinh() {
+		this.setTitle("Giai phuong trinh bac hai");
+		this.setSize(400, 300);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	public static void main(String[] args) {
+		new GiaiPhuongTrinh().setVisible(true);
+	}
+}

@@ -1,0 +1,33 @@
+package demo;
+
+import java.awt.GridBagLayout;
+import java.awt.Panel;
+
+import javax.swing.Box;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class DemoListEdit_MaVuToTram_67 extends JFrame {
+	private JTextArea txtName;
+	public DemoListEdit_MaVuToTram_67() {
+		setSize(400, 300);
+		setTitle("List Edit");
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		Panel pMain = new Panel();
+		pMain.setLayout(new GridBagLayout());
+		Panel pText = new Panel();
+		txtName = new JTextArea(200, 300);
+		JScrollPane lstPane = new JScrollPane(txtName);
+		pText.add(txtName);
+		pText.add(lstPane);
+		pMain.add(pText);
+		add(pMain);
+	}
+	public static void main(String[] args) {
+		new DemoListEdit_MaVuToTram_67().setVisible(true);
+	}
+}

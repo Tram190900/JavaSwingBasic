@@ -1,0 +1,66 @@
+package lab1;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Box;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class ChuyenDoF_BoxLayout extends JFrame implements ActionListener {
+	private JTextField txtDoF;
+	private JLabel lblDoC;
+	private JPanel pannel;
+	public ChuyenDoF_BoxLayout() {
+		this.setTitle("Chuyen do F thanh do C");
+		this.setSize(250,100);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setBackground(Color.yellow);
+		
+		pannel = new JPanel();
+		pannel.setBackground(Color.YELLOW);
+		Box b = Box.createVerticalBox();
+		Box pDoF = Box.createHorizontalBox();
+		Box pDoC = Box.createHorizontalBox();
+		
+		pDoF.add(new JLabel("Do F can chuyen: "));
+		txtDoF = new JTextField(3);
+		pDoF.add(txtDoF);
+		
+		pDoC.add(new JLabel("Do C nhan duoc: "));
+		lblDoC = new JLabel("...");
+		pDoC.add(lblDoC);
+		
+		b.add(Box.createRigidArea(new Dimension(10, 10)));
+		b.add(pDoF);
+		b.add(Box.createRigidArea(new Dimension(10, 10)));
+		b.add(pDoC);
+		b.add(Box.createRigidArea(new Dimension(10,10)));
+		
+		pannel.add(b);
+		add(pannel, BorderLayout.CENTER);
+		
+		txtDoF.addActionListener(this);
+	}
+	public static void main(String[] args) {
+		new ChuyenDoF_BoxLayout().setVisible(true);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object obj = e.getSource();
+		if(obj.equals(txtDoF)) {
+			int doF, doC;
+			doF = Integer.parseInt(txtDoF.getText());
+			doC = (doF-32)*5/9;
+			lblDoC.setText(Integer.toString(doC));
+		}
+		
+	}
+}

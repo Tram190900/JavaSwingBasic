@@ -1,0 +1,47 @@
+package demo;
+
+import java.awt.BorderLayout;
+import java.awt.GridBagLayout;
+import java.awt.Panel;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class DemoListEdit_MaVuToTram_67 extends JFrame {
+	private JTextArea txtName;
+	private JLabel lblTitle;
+	private JTextField txtInput;
+	private JButton btnAdd;
+	private JButton btnRemove;
+	public DemoListEdit_MaVuToTram_67() {
+		setSize(400, 300);
+		setTitle("List Edit");
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		txtName = new JTextArea(200,300);
+		add(txtName, BorderLayout.WEST);
+		
+		Box pRight = Box.createVerticalBox();
+		Box bInput = Box.createHorizontalBox();
+		Box bButton = Box.createHorizontalBox();
+		bInput.add(lblTitle = new JLabel("Input Name: "));
+		bInput.add(txtInput = new JTextField(15));	
+		bButton.add(btnAdd = new JButton("Add Item"));
+		bButton.add(btnRemove = new JButton("Remove Item"));
+		
+		pRight.add(bInput);
+		pRight.add(bButton);
+		add(pRight, BorderLayout.EAST);
+		
+	}
+	public static void main(String[] args) {
+		new DemoListEdit_MaVuToTram_67().setVisible(true);
+	}
+}

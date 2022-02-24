@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;demo.DemoListDemo_MaVuToTram_67&apos; to &apos;DemoListEdit_MaVuToTram_67&apos;&#x0D;&#x0A;- Original project: &apos;67_18055381_MaVuToTram&apos;&#x0D;&#x0A;- Original element: &apos;demo.DemoListDemo_MaVuToTram_67&apos;&#x0D;&#x0A;- Renamed element: &apos;demo.DemoListEdit_MaVuToTram_67&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DemoListDemo_MaVuToTram_67&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;demo{DemoListDemo_MaVuToTram_67.java[DemoListDemo_MaVuToTram_67" matchStrategy="1" name="DemoListEdit_MaVuToTram_67" qualified="false" references="true" similarDeclarations="false" stamp="1645712249011" textual="false" version="1.0"/>
+</session>

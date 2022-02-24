@@ -1,0 +1,32 @@
+package demo;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class DemoComboBox_MaVuToTram_67 extends JFrame {
+	private JLabel lbl;
+	private JComboBox<String[]> cont;
+	public DemoComboBox_MaVuToTram_67() {
+		setTitle("Demo ComboBox");
+		setSize(340, 200);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		
+		lbl = new JLabel("The quick brown fox jumps over the lazy dog");
+		lbl.setFont(new Font("Serif",Font.PLAIN,16));
+		add(lbl,BorderLayout.CENTER);
+		
+		cont = new JComboBox();
+		String[] lst = {"Serif","SansSerif","Monospaced"};
+		cont.addItem(lst);
+		add(cont,BorderLayout.SOUTH);
+	}
+	public static void main(String[] args) {
+		new DemoComboBox_MaVuToTram_67().setVisible(true);
+	}
+}

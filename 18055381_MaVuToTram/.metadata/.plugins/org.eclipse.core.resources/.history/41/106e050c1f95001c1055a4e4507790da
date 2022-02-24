@@ -1,0 +1,39 @@
+package demo;
+
+import java.awt.BorderLayout;
+import java.awt.Checkbox;
+import java.awt.Dimension;
+
+import javax.swing.Box;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class DemoCheckBox_MaVuToTram_67 extends JFrame {
+	private javax.swing.JTextField txt_text;
+	private Checkbox bold;
+	private Checkbox italic;
+	public DemoCheckBox_MaVuToTram_67() {
+		setTitle("Demo check box");
+		setSize(300, 130);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		
+		JPanel p1 = new JPanel();
+		p1.add(txt_text = new JTextField("Watch the font style change"));
+		add(p1, BorderLayout.NORTH);
+		
+		Box b = Box.createVerticalBox();
+		Box bButton = Box.createHorizontalBox();
+		bButton.add(Box.createRigidArea(new Dimension(50, 0)));
+		bButton.add(bold = new Checkbox("Bold"));
+		bButton.add(Box.createRigidArea(new Dimension(50, 0)));
+		bButton.add(italic = new Checkbox("Italic"));
+		b.add(bButton);
+		add(b,BorderLayout.CENTER);
+	}
+	public static void main(String[] args) {
+		new DemoCheckBox_MaVuToTram_67().setVisible(true);
+	}
+}

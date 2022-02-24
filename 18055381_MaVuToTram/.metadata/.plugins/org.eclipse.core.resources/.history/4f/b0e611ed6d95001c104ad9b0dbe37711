@@ -1,0 +1,18 @@
+package demo;
+
+import javax.swing.JFrame;
+
+public class DemoCheckBox_RadioButton_MaVuToTram_67 extends JFrame {
+	public DemoCheckBox_RadioButton_MaVuToTram_67() {
+		setTitle("Demo CheckBox and RadioButton");
+		setSize(200, 150);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		
+	}
+	public static void main(String[] args) {
+		new DemoCheckBox_RadioButton_MaVuToTram_67().setVisible(true);
+	}
+}

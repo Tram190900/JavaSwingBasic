@@ -1,0 +1,13 @@
+package demo;
+
+import javax.swing.JFrame;
+
+public class DemoListDemo_MaVuToTram_67 extends JFrame {
+	public DemoListDemo_MaVuToTram_67() {
+		setSize(400, 500);
+		setTitle("List");
+	}
+	public static void main(String[] args) {
+		new DemoListDemo_MaVuToTram_67().setVisible(true);
+	}
+}

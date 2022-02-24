@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\HK2_21_22\LTHSK\practice\18055381_MaVuToTram\.metadata\.plugins\org.eclipse.jdt.core
+2582632569.index
+3251463056.index

@@ -1,0 +1,29 @@
+package demo;
+
+import javax.swing.Box;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+public class DemoCheckBox_RadioButton_MaVuToTram_67 extends JFrame {
+	private JCheckBox chkItalic;
+	private JRadioButton radLeft;
+	private JRadioButton radRight;
+	public DemoCheckBox_RadioButton_MaVuToTram_67() {
+		setTitle("Demo CheckBox and RadioButton");
+		setSize(300, 150);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		Box b = Box.createVerticalBox();
+		Box b1 = Box.createHorizontalBox();
+		b1.add(chkItalic = new JCheckBox("Italic"));
+		b1.add(radLeft = new JRadioButton("Left"));
+		b1.add(radRight = new JRadioButton("Right"));
+		add(b);
+	}
+	public static void main(String[] args) {
+		new DemoCheckBox_RadioButton_MaVuToTram_67().setVisible(true);
+	}
+}

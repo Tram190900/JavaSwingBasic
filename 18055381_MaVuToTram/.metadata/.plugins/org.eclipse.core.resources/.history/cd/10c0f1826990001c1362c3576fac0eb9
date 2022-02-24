@@ -1,0 +1,26 @@
+package lab1;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+
+public class GiaiPhuongTrinh extends JFrame {
+	private JPanel pannelTitle;
+	private JLabel lblTitle;
+	public GiaiPhuongTrinh() {
+		this.setTitle("Giai phuong trinh bac hai");
+		this.setSize(450, 350);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		pannelTitle = new JPanel();
+		lblTitle = new JLabel("GIAI PHUONG TRIN HAC HAI", SwingConstants.CENTER);
+		pannelTitle.add(lblTitle);
+		add(pannelTitle);
+	}
+	public static void main(String[] args) {
+		new GiaiPhuongTrinh().setVisible(true);
+	}
+}
