@@ -1,0 +1,28 @@
+package lab2;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+public class GUIGiaiPhuongTrinhBacHai extends JFrame {
+	private JLabel lblTitle;
+	public GUIGiaiPhuongTrinhBacHai() {
+		setTitle("Giải phương trình bậc hai");
+		setSize(450, 350);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		
+		add(lblTitle = new JLabel("GIẢI PHƯƠNG TRÌNH BẬC HAI",SwingConstants.CENTER),BorderLayout.NORTH);
+		lblTitle.setForeground(Color.BLUE);
+		lblTitle.setFont(new Font("Serif",Font.BOLD,20));
+		
+	}
+	public static void main(String[] args) {
+		new GUIGiaiPhuongTrinhBacHai().setVisible(true);
+	}
+}

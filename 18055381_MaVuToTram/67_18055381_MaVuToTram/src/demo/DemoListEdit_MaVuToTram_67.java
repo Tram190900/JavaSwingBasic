@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.DefaultListModel;
@@ -11,12 +13,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class DemoListEdit_MaVuToTram_67 extends JFrame {
-	private JTextArea txtName;
+public class DemoListEdit_MaVuToTram_67 extends JFrame implements ActionListener {
 	private JLabel lblTitle;
 	private JTextField txtInput;
 	private JButton btnAdd;
@@ -55,8 +57,27 @@ public class DemoListEdit_MaVuToTram_67 extends JFrame {
 		pRight.add(Box.createRigidArea(new Dimension(170, 170)));
 		add(pRight, BorderLayout.EAST);
 		
+		btnAdd.addActionListener(this);
+		btnRemove.addActionListener(this);
 	}
 	public static void main(String[] args) {
 		new DemoListEdit_MaVuToTram_67().setVisible(true);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource().equals(btnAdd)) {
+			if(txtInput.getText().equals(""))
+				JOptionPane.showConfirmDialog(this, "Chua nhap ten!!","Warning",JOptionPane.OK_CANCEL_OPTION,JOptionPane.WARNING_MESSAGE);
+			else {
+				lstModelName.addElement(txtInput.getText());
+				txtInput.setText("");
+			}
+		}
+		else {
+			int selection = JOptionPane.showConfirmDialog(this,"Bạn có muốn xóa ?","Thông báo",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+			if(selection == JOptionPane.YES_OPTION)
+				lstModelName.removeElement(lstName.getSelectedValue());
+		}
+		
 	}
 }

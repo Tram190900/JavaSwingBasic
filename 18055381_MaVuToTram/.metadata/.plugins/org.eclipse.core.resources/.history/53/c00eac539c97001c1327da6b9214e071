@@ -1,0 +1,65 @@
+package lab2;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
+
+public class GUIGiaiPhuongTrinhBacHai extends JFrame {
+	private JLabel lblTitle;
+	private JTextField txtNhapA;
+	private JTextField txtNhapB;
+	private JTextField txtNhapC;
+	private JTextField txtKQ;
+	public GUIGiaiPhuongTrinhBacHai() {
+		setTitle("Giải phương trình bậc hai");
+		setSize(450, 350);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		
+		add(lblTitle = new JLabel("GIẢI PHƯƠNG TRÌNH BẬC HAI",SwingConstants.CENTER),BorderLayout.NORTH);
+		lblTitle.setForeground(Color.BLUE);
+		lblTitle.setFont(new Font("Serif",Font.BOLD,20));
+		
+		JPanel pInput = new JPanel();
+		pInput.setLayout(new BoxLayout(pInput, BoxLayout.Y_AXIS));
+		Border borderIpnut = BorderFactory.createLineBorder(Color.RED);
+		TitledBorder titleBorderInput = new TitledBorder(borderIpnut, "Nhập vào các số a, b, c");
+		pInput.setBorder(titleBorderInput);
+		JPanel pNhapA = new JPanel();
+		JLabel lblA;
+		pNhapA.add(lblA = new JLabel("Nhập a: ")); pNhapA.add(txtNhapA = new JTextField(15));
+		pInput.add(pNhapA);
+		JPanel pNhapB = new JPanel();
+		JLabel lblB;
+		pNhapB.add(lblB = new JLabel("Nhập b: ")); pNhapB.add(txtNhapB = new JTextField(15));
+		pInput.add(pNhapB);
+		JPanel pNhapC = new JPanel();
+		JLabel lblC;
+		pNhapC.add(lblC = new JLabel("Nhập c: ")); pNhapC.add(txtNhapC = new JTextField(15));
+		pInput.add(pNhapC);
+		JPanel pKQ = new JPanel();
+		JLabel lblKQ;
+		pKQ.add(lblKQ = new JLabel("Kết quả nhận được: ")); pKQ.add(txtKQ = new JTextField(15));
+		pInput.add(pKQ);
+		
+		lblA.setPreferredSize(lblKQ.getPreferredSize());
+		lblB.setPreferredSize(lblKQ.getPreferredSize());
+		lblC.setPreferredSize(lblKQ.getPreferredSize());
+		
+		add(pInput,BorderLayout.CENTER);
+	}
+	public static void main(String[] args) {
+		new GUIGiaiPhuongTrinhBacHai().setVisible(true);
+	}
+}

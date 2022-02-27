@@ -1,0 +1,44 @@
+package lab2;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+public class GUIGiaiPhuongTrinhBacHai extends JFrame {
+	private JLabel lblTitle;
+	private JTextField txtNhapA;
+	private JTextField txtNhapB;
+	private JTextField txtNhapC;
+	private JTextField txtKQ;
+	public GUIGiaiPhuongTrinhBacHai() {
+		setTitle("Giải phương trình bậc hai");
+		setSize(450, 350);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		
+		add(lblTitle = new JLabel("GIẢI PHƯƠNG TRÌNH BẬC HAI",SwingConstants.CENTER),BorderLayout.NORTH);
+		lblTitle.setForeground(Color.BLUE);
+		lblTitle.setFont(new Font("Serif",Font.BOLD,20));
+		
+		JPanel pInput = new JPanel();
+		pInput.setLayout(new BoxLayout(pInput, BoxLayout.Y_AXIS));
+		JPanel pNhapA = new JPanel();
+		pNhapA.add(new JLabel("Nhập a: ")); pNhapA.add(txtNhapA = new JTextField(10));
+		pInput.add(pNhapA);
+		pInput.add(new JLabel("Nhập b: "));pInput.add(txtNhapB = new JTextField(10));
+		pInput.add(new JLabel("Nhập c: "));pInput.add(txtNhapC = new JTextField(10));
+		pInput.add(new JLabel("Kết quả: "));pInput.add(txtKQ = new JTextField(10));
+		add(pInput,BorderLayout.CENTER);
+	}
+	public static void main(String[] args) {
+		new GUIGiaiPhuongTrinhBacHai().setVisible(true);
+	}
+}
